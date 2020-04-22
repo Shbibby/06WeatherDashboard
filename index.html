@@ -202,7 +202,7 @@
 
     function loadObjArr() {
       var fileData = localStorage.getItem("localWeatherObj");
-      if (fileData === null) {
+      if (fileData == null) {
         fileData = "[]";
       }
       var objFileData = JSON.parse(fileData);
@@ -211,7 +211,7 @@
     }
 
     function saveObjArr(saveData) {
-      if (saveData === null || saveData === "") {
+      if (saveData == null) {
         localStorage.setItem("localWeatherObj", "[]");
       } else {
         localStorage.setItem("localWeatherObj", JSON.stringify(saveData));
